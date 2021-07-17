@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="assets/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/media.css"/>
+	</head>
+	<body>
+		<div class="contation">
+			<video id="background_video" loop muted></video>
+			<div id="video_cover"></div>
+			<div class="circle">
+				<img src="assets/image/circle.png" alt="">
+			</div>
+			<div class="login_box">
+				<div class="login_Form">
+					<div class="logo">
+						<img src="assets/image/logo.png" >
+					</div>
+					<div class="title"><h3>按每24小时真实展现计费</h3></div>
+					<div class="form">
+						<form action="" method="post">
+							<div class="section_wap_box">
+								<span><img src="assets/image/user.png" ></span>
+								<input type="text" name="username" id="username" value="" placeholder="请输入用户名" />
+							</div>
+							<div class="section_wap_box">
+								<span><img src="assets/image/pass.png" ></span>
+								<input type="password" name="password" id="password" value="" placeholder="请输入密码" />
+							</div>
+							<div class="section_wap_box wap_btn">
+								<input type="submit" class="btn" id="btn" value="登录"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="assets/bideo.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function () {
+			  var bv = new Bideo();
+			  bv.init({
+			    // Video元素
+			    videoEl: document.querySelector('#background_video'),
+			 
+			    // 容器元素
+			    container: document.querySelector('body'),
+			 
+			    // 自适应调整
+			    resize: true,
+			 
+			    // autoplay: false,
+			 
+			    isMobile: window.matchMedia('(max-width: 768px)').matches,
+			 
+			    playButton: document.querySelector('#play'),
+			    pauseButton: document.querySelector('#pause'),
+			 
+			    // 加载视频源, 根据实际业务更换自己的视频源文件
+			    src: [
+			      {
+			        src: 'https://v.xiaoyunlaoshi.com/static/video/78900/denglubg.mp4',
+			        type: 'video/mp4'
+			      },
+			      {
+			        src: 'night.webm',
+			        type: 'video/webm;codecs="vp8, vorbis"'
+			      }
+			    ],
+			 
+			    // 一旦视频加载后即将视频封面隐藏
+			    onLoad: function () {
+			      document.querySelector('#video_cover').style.display = 'none';
+			    }
+			  });
+			}());
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+/* @media screen and (max-width: 1300px) {
+    .circle{
+		top: 80px;
+	}
+	.circle img {
+        width: 47%;
+    }
+}
+@media screen and (max-width: 1290px) {
+	.circle{
+		top: 70px;
+	}
+    .circle img {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1180px) {
+    .circle img {
+        width: 53%;
+    }
+} */
